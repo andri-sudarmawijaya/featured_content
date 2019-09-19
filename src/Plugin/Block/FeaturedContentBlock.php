@@ -45,6 +45,7 @@ class FeaturedContentBlock extends BlockBase {
     }
 	
 	dpm($value);
+	dpm($view->result);
     return $value;
   }
 }
