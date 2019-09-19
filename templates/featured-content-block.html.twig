@@ -12,10 +12,6 @@
     'clear-both',
 ] %}
 <div{{ attributes.addClass(classes) }}>
-    {% for content in value %}
-        <p>{{value}}</p>
-        {{ kint(value) }}
-
-	{% endfor %}
+    {{ kint() }}
 	
 </div>
