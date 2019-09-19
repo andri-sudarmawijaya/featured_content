@@ -38,4 +38,4 @@ class FeaturedContentBlock extends BlockBase {
 		'#embed' => TRUE,
 	];
   }
-
+}
