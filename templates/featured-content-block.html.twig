@@ -14,8 +14,8 @@
 <div{{ attributes.addClass(classes) }}>
     {% for content in value %}
         <p>{{value}}</p>
-    {% endfor %}
-    {% for result in results %}
-        <p>{{result}}</p>
-    {% endfor %}
+        {{ kint(value) }}
+
+	{% endfor %}
+	
 </div>
