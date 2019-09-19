@@ -39,7 +39,6 @@ function featured_content_theme() {
         'content' => NULL,
       ],
       'render element' => 'children',
-      'base hook' => 'block',
     ],
 	
 	
