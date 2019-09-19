@@ -38,7 +38,7 @@ class FeaturedContentBlock extends BlockBase {
 	// $myresults = $view->preview();  = array
 	// $myresults = $view->render();  = array
 	$results = $view->result; // = array
-	dpm($results);
+	dpm($results[0]);
     return $results;
   }
 }
