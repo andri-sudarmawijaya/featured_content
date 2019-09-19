@@ -29,11 +29,11 @@ class FeaturedContentBlock extends BlockBase {
 	// $myresults = $view->render();  = array
 	$myresults = $view->result; // = array	  
     $build = [];
-    $build['#theme'] = 'featured_content_block' => [
+    $build['#theme'] = array('featured_content_block' => [
       'variables' => [
         'results' => $myresults,
       ],
-	];
+	]);
     $build['featured_content_block']['#markup'] = 'Implement FeaturedContentBlock.';
 
     return $build;
