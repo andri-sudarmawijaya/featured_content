@@ -33,12 +33,18 @@ class FeaturedContentBlock extends BlockBase {
     $view = \Drupal\views\Views::getView('front_services');
 	$view->setDisplay('default');
 	$view->preExecute();
-	$view->execute();
 
-	// $myresults = $view->preview();  = array
-	// $myresults = $view->render();  = array
-	$results = $view->result; // = array
-	dpm($results[0]);
-    return $results;
+    if ($view) {
+      $view->execute();
+      foreach ($view->result as $rid => $row) {
+        foreach ($view->field as $fid => $field ) {
+          $value[$rid][$fid . '-value'] = $field->getValue($row);
+          $value[$rid][$fid . '-render'] = $field->render($row);
+        }
+      }
+    }
+	
+	dpm($value);
+    return $value;
   }
 }
