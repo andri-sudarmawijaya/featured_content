@@ -20,9 +20,26 @@ class FeaturedContentBlock extends BlockBase {
   public function build() {
     $build = [];
     $build['#theme'] = 'featured_content_block';
+    $build['featured_content_block']['results'] = $this->getData();
     $build['featured_content_block']['#markup'] = 'Implement FeaturedContentBlock.';
 
     return $build;
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function getData() {
+
+	$view = Views::getView('front_services');
+
+	$view->setDisplay('default');
+	$view->preExecute();
+	$view->execute();
+
+	// $myresults = $view->preview();  = array
+	// $myresults = $view->render();  = array
+	$results = $view->result; // = array
+    return $results;
+  }
 }
