@@ -1,0 +1,8 @@
+
+featured_content.featured_content_controller_build:
+  path: '/featured_content/build'
+  defaults:
+    _controller: '\Drupal\featured_content\Controller\FeaturedContentController::build'
+    _title: 'Featured Content'
+  requirements:
+    _permission: 'access content'
