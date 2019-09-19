@@ -30,9 +30,7 @@ class FeaturedContentBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function getData() {
-
-	$view = Views::getView('front_services');
-
+    $view = \Drupal\views\Views::getView('front_services');
 	$view->setDisplay('default');
 	$view->preExecute();
 	$view->execute();
