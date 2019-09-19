@@ -30,7 +30,8 @@ function featured_content_theme() {
   return [
     'freatured_content_block' => [
       'variables' => [
-        'content' => NULL
+        'content' => NULL,
+        'results' => NULL
       ],
       'render element' => 'children',
     ],
