@@ -23,7 +23,17 @@ class FeaturedContentBlock extends BlockBase {
     $build['featured_content_block']['results'] = $this->getData();
     $build['featured_content_block']['#markup'] = 'Implement FeaturedContentBlock.';
 
-    return $build;
+    $view = \Drupal\views\Views::getView('front_services');
+	$view->setDisplay('default');
+	$view->preExecute();
+    //return $build;
+	return [
+		'#type' => 'view',
+		'#name' => 'myfirstview',
+		'#view' => $view,
+		'#display_id' => 'default',
+		'#embed' => TRUE,
+	];
   }
 
   /**
