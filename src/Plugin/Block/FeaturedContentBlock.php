@@ -18,22 +18,8 @@ class FeaturedContentBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-
-	$view = Views::getView('front_services');
-
-	$view->setDisplay('default');
-	$view->preExecute();
-	$view->execute();
-
-	// $myresults = $view->preview();  = array
-	// $myresults = $view->render();  = array
-	$myresults = $view->result; // = array	  
     $build = [];
-    $build['#theme'] = array('featured_content_block' => [
-      'variables' => [
-        'results' => $myresults,
-      ],
-	]);
+    $build['#theme'] = 'featured_content_block';
     $build['featured_content_block']['#markup'] = 'Implement FeaturedContentBlock.';
 
     return $build;
