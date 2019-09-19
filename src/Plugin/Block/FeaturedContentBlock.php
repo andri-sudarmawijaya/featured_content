@@ -32,6 +32,7 @@ class FeaturedContentBlock extends BlockBase {
     
 	return [
 		'#type' => 'view',
+		'#theme' => 'block__views_view__front_services__default',
 		'#name' => 'myfirstview',
 		'#view' => $view,
 		'#display_id' => 'default',

@@ -31,9 +31,17 @@ function featured_content_theme() {
     'freatured_content_block' => [
       'variables' => [
         'content' => NULL,
-        'results' => NULL
       ],
       'render element' => 'children',
     ],
+    'block__views_view__front_services__default' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+      'render element' => 'children',
+      'base hook' => 'block',
+    ],
+	
+	
   ];
 }
