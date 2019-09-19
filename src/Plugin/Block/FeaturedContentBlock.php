@@ -20,7 +20,6 @@ class FeaturedContentBlock extends BlockBase {
   public function build() {
     $build = [];
     $build['#theme'] = 'featured_content_block';
-    $build['featured_content_block']['results'] = $this->getData();
     $build['featured_content_block']['#markup'] = 'Implement FeaturedContentBlock.';
 
     $view = \Drupal\views\Views::getView('front_services');
