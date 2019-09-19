@@ -39,7 +39,7 @@ class FeaturedContentBlock extends BlockBase {
       foreach ($view->result as $rid => $row) {
         foreach ($view->field as $fid => $field ) {
           $value[$rid][$fid . '-value'] = $field->getValue($row);
-          $value[$rid][$fid . '-render'] = $field->render($row);
+          $value[$rid][$fid . '-render'] = $field->advancedRender($row);
         }
       }
     }
